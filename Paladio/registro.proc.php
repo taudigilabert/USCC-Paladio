@@ -65,7 +65,7 @@
     $rutaArchivo = "cosas.txt";
 
     // Datos del usuario
-    $datosUsuario = $usuario . ":" . $contraEncriptada . ":" . $rol . ":" . $nombre . ":" . $apellido . ":" . $descripcion . ":" . basename($imageName) . PHP_EOL;
+    $datosUsuario = $usuario . ',' . $contraEncriptada . ',' . $rol . ',' . $nombre . ',' . $apellido . ',"' . $descripcion . '",' . basename($imageName) . PHP_EOL;
 
     // Escribir datos en el archivo, en modo append
     $archivo = fopen($rutaArchivo, "a");

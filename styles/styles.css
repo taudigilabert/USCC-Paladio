@@ -1,0 +1,439 @@
+/*======================== VARIABLES COLORES (:HOVER) ========================*/
+:root {
+  --color-principal: #f39c12; /* Color principal (hover, bordes) */
+  --color-secundario: #ebebeb; /* Color del texto */
+  --color-hover-texto: #000; /* Color del texto :hover*/
+  --sombra-hover: 0 0 15px rgba(243, 156, 18, 0.8),
+    0 0 30px rgba(243, 156, 18, 0.5); /*Blurr :hover*/
+}
+
+/*======================== ESTILOS ========================*/
+#USCSSPaladio {
+  text-shadow: var(--sombra-hover);
+}
+
+body {
+  font-family: "Courier", sans-serif;
+  background-color: #000;
+  color: var(--color-secundario);
+}
+
+#bodyInicio {
+  min-height: 100vh; /* Toda la altura de la pantalla */
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  font-family: "Pirulen", sans-serif;
+  text-shadow: var(--sombra-hover);
+}
+
+h5 {
+  font-family: "Pirulen", sans-serif;
+}
+
+#mainFooter {
+  color: grey; /* No definido en las variables */
+  padding: 10px;
+  font-size: 0.9em;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+
+#tituloInicial {
+  font-family: "Pirulen", sans-serif;
+  color: var(--color-secundario);
+}
+
+#bodyPantallaInicial {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-secundario);
+  background: #000;
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Contenido por encima del video */
+}
+
+/*======================== LISTADO ========================*/
+#listadoInformes {
+  background-color: rgba(0, 0, 0, 0.95);
+  border: 2px solid var(--color-principal);
+  border-radius: 0px;
+  margin-bottom: 15px;
+}
+
+#listadoInformes:hover {
+  background-color: var(--color-principal);
+  border-color: var(--color-principal);
+  color: var(--color-hover-texto);
+  box-shadow: var(--sombra-hover);
+}
+
+#contenidoListadoInformes {
+  color: var(--color-secundario);
+}
+
+#contenidoListadoInformes:hover {
+  color: var(--color-hover-texto);
+}
+
+/*======================== MENSAJERÍA ========================*/
+#itemMensajeria {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--color-principal);
+}
+
+.mensaje-contenido {
+  max-height: 200px; 
+  overflow-y: auto; 
+  white-space: pre-wrap; 
+  word-wrap: break-word; 
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.mensaje-contenido::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.mensaje-contenido::-webkit-scrollbar-thumb {
+  background: var(--color-principal);
+  border-radius: 4px;
+}
+
+.mensaje-contenido::-webkit-scrollbar-thumb:hover {
+  background: rgba(243, 156, 18, 0.8); 
+}
+
+/*======================== CARDS ========================*/
+#cardCodificacion,
+#cardInforme {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+  color: var(--color-secundario);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 0px;
+}
+
+#cardCodificacion:hover,
+#cardInforme:hover {
+  box-shadow: var(--sombra-hover);
+}
+
+/*======================== CONTENEDORES ========================*/
+#contenedorInicio {
+  max-width: 1400px;
+  padding: 50px;
+  border: 2px solid var(--color-principal);
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+#contentPantallaInicial {
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 20px;
+  border: 2px solid var(--color-principal);
+  box-shadow: 0px 30px 40px rgba(0, 0, 0, 1);
+}
+
+#containerPersonalizar,
+#containerTodosInformes,
+#containerMensajeria,
+#itemMensajeria {
+  max-width: 1400px;
+  padding: 10px;
+  border: 2px solid var(--color-principal);
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+#itemMensajeria:hover {
+  border-color: var(--color-principal);
+  color: var(--color-hover-texto);
+  box-shadow: var(--sombra-hover);
+}
+
+#containerError {
+  max-width: 1400px;
+  padding: 50px;
+  border: 2px solid var(--color-principal);
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+#menuPrincipal {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+}
+
+#contenedorInfoUsuario {
+  border-radius: 0px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid var(--color-principal);
+}
+
+/*======================== BLOQUES DE TEXTO ========================*/
+.registro-box {
+  border: 2px solid var(--color-principal);
+  border-radius: 0px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: var(--color-secundario);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 1rem; /* Tamaño de la fuente */
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%; /* Evita que se desborde si el contenido es largo */
+}
+
+#informeTexto {
+  overflow-x: auto; /* Scroll horizontal */
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  border: 1px solid var(--color-principal);
+}
+
+/*======================== ALERTAS ========================*/
+.alerta {
+  padding: 15px;
+  border-radius: 0px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-family: "Courier", sans-serif;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alertaErrorCredenciales {
+  background-color: rgba(255, 0, 0, 0.1); /* Fondo rojo suave */
+  color: var(--color-secundario);
+  border: 1px solid var(--color-principal);
+}
+
+.alertaCorrectoCredenciales {
+  background-color: rgba(0, 255, 0, 0.1); /* Fondo verde suave */
+  color: var(--color-secundario);
+  border: 1px solid var(--color-principal);
+}
+
+/*======================== EDITAR PERFIL ========================*/
+#perfilUsuario {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid var(--color-principal);
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 0px;
+}
+
+/*======================== BOTONES ========================*/
+.btnPersonalizado {
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: var(--color-secundario);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.btnPersonalizado:hover {
+  background-color: var(--color-principal);
+  border-color: var(--color-principal);
+  color: var(--color-hover-texto);
+  box-shadow: var(--sombra-hover);
+}
+
+#btnIniciarSesion,
+#btnRegistro {
+  width: 80%;
+  max-width: 600px;
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+/*======================== MODALS INICIO SESION / REGISTRO ========================*/
+.modal-content {
+  background-color: #222;
+  color: #ebebeb;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 2rem;
+  color: #ebebeb;
+}
+
+.form-control {
+  background-color: #222;
+  color: #ebebeb;
+}
+
+.form-control:focus {
+  border-color: var(--color-principal);
+  box-shadow: 0 0 7px rgba(243, 156, 18, 0.7); /* Mantener el color dorado en el enfoque */
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.modal.fade .modal-dialog {
+  animation: slideIn 0.5s ease-out;
+  margin-top: 10vh;
+}
+
+/*======================== IMAGENES ========================*/
+#logoInicio {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+
+#logoIndex {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+#fotoPerfil {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid var(--color-principal);
+  border-radius: 0px;
+}
+
+#logoArchivos {
+  max-width: 550px;
+  height: auto;
+}
+
+/*======================== VIDEO ========================*/
+#screenCode {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ancho completo */
+  height: 100vh; /* Altura completa */
+  object-fit: cover; /* Ajusta el contenido sin distorsión */
+  z-index: -1; /* Envía al fondo */
+  opacity: 0.7; /* Ajusta la transparencia */
+}
+
+#screenSaver {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100vw; /* Ancho completo */
+  height: 100vh; /* Altura completa */
+  z-index: 1; /* Debajo del contenido principal */
+  overflow: hidden; /* Evita cualquier desbordamiento */
+}
+
+#screenSaver video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrado perfecto */
+  width: 100%; /* Asegura que el video ocupe el ancho completo */
+  height: 100%; /* Asegura que el video ocupe el alto completo */
+  object-fit: cover; /* Escala y recorta el video para llenar el contenedor */
+}
+
+/*======================== CONTROL DE AUDIO ========================(EN OBRAS)*/
+#audio-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+#audio-title {
+  font-family: "Courier", sans-serif;
+  color: #ebebeb;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#audio-control button {
+  background: none;
+  border: none;
+  color: #ebebeb;
+  font-size: 24px;
+  margin: 5px;
+  transition: text-shadow 0.3s ease;
+}
+
+#audio-control button:hover i {
+  color: var(--color-principal);
+  text-shadow: 0 0 15px var(--color-principal), 0 0 30px var(--color-principal); /* Efecto de resplandor */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/*======================== FUENTES ========================*/
+@font-face {
+  font-family: "Pirulen";
+  src: url("../fonts/pirulen\ rg.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
